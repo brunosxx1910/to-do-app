@@ -1,1 +1,81 @@
+git commit -m "CÓDIGO DO HTML"
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Acadêmica</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header>
+            <h1>Lista de Atividades</h1>
+            <p>Gestão de tarefas e prioridades acadêmicas</p>
+        </header>
+
+        <!-- Seção de entrada de dados -->
+        <section class="input-group">
+            <div class="input-wrapper">
+                <label for="task-input" class="sr-only">Nova Tarefa</label>
+                <input type="text" id="task-input" placeholder="O que precisa ser feito?">
+                
+                <label for="priority-select" class="sr-only">Prioridade</label>
+                <select id="priority-select">
+                    <option value="alta">Alta</option>
+                    <option value="media" selected>Média</option>
+                    <option value="baixa">Baixa</option>
+                </select>
+
+                <button type="button" id="add-btn">Adicionar</button>
+            </div>
+        </section>
+
+        <!-- Lista de Tarefas -->
+        <ul class="task-list">
+            
+            <!-- Exemplo de Tarefa 1 (Alta Prioridade) -->
+            <li class="task-item priority-high">
+                <div class="task-content">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Finalizar relatório de Redes</label>
+                </div>
+                <div class="task-actions">
+                    <span class="badge">Alta</span>
+                    <button class="delete-btn" onclick="this.closest('li').remove()" title="Excluir">🗑️</button>
+                </div>
+            </li>
+
+            <!-- Exemplo de Tarefa 2 (Média Prioridade) -->
+            <li class="task-item priority-medium">
+                <div class="task-content">
+                    <input type="checkbox" id="check2">
+                    <label for="check2">Estudar para prova de Cálculo</label>
+                </div>
+                <div class="task-actions">
+                    <span class="badge">Média</span>
+                    <button class="delete-btn" onclick="this.closest('li').remove()" title="Excluir">🗑️</button>
+                </div>
+            </li>
+
+            <!-- Exemplo de Tarefa 3 (Baixa Prioridade) -->
+            <li class="task-item priority-low">
+                <div class="task-content">
+                    <input type="checkbox" id="check3">
+                    <label for="check3">Comprar caderno novo</label>
+                </div>
+                <div class="task-actions">
+                    <span class="badge">Baixa</span>
+                    <button class="delete-btn" onclick="this.closest('li').remove()" title="Excluir">🗑️</button>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
